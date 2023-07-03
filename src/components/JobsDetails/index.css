@@ -1,0 +1,61 @@
+.jobs-details-container {
+  width: 90%;
+  margin-top: 20px;
+}
+.search-input {
+  width: 90%;
+  background-color: transparent;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #ffffff;
+}
+.input-container {
+  width: 90%;
+  border: 1.5px solid #7e858e;
+  height: 34px;
+}
+.search-icon-button {
+  height: 100%;
+  border: none;
+  background-color: #7e858e;
+  width: 10%;
+  cursor: pointer;
+}
+.search-icon {
+  font-size: 20px;
+}
+.failure-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.failure-img {
+  height: 190px;
+  width: 240px;
+}
+.failure-heading {
+  font-size: 27px;
+  font-weight: bold;
+  font-family: 'roboto';
+  color: white;
+}
+.failure-description {
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'roboto';
+  color: white;
+}
+.retry-button {
+  border: none;
+  border-radius: 7px;
+  height: 34px;
+  width: 90px;
+  background-color: #4f46e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+}
