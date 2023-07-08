@@ -18,7 +18,7 @@ const Header = props => {
       <Link to="/" className="nav-link">
         <img
           src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-          alt="website-logo"
+          alt="website logo"
           className="web-logo"
         />
       </Link>

@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner'
 
 import {BsSearch} from 'react-icons/bs'
 
-import JobCards from '../JobCards'
+import JobDetailsCard from '../JobDetailsCard'
 
 import './index.css'
 
@@ -75,10 +75,10 @@ class JobsDetails extends Component {
   renderJobsDetailsCards = () => {
     const {jobsDetailsList} = this.state
 
-    console.log(jobsDetailsList)
+    console.log(jobsDetailsList[0])
 
-    jobsDetailsList.map(eachJob => (
-      <JobCards jobDetails={eachJob} key={eachJob.id} />
+    return jobsDetailsList.map(eachJobItem => (
+      <JobDetailsCard summary={eachJobItem} key={eachJobItem.id} />
     ))
   }
 
@@ -97,7 +97,7 @@ class JobsDetails extends Component {
       />
       <h1 className="failure-heading">Oops Something Went Wrong</h1>
       <p className="failure-description">
-        We cannot seem to find the the page you are looking for.
+        We cannot seem to find the the page you are looking for
       </p>
       <button
         type="button"
@@ -139,7 +139,9 @@ class JobsDetails extends Component {
             <BsSearch className="search-icon" />
           </button>
         </div>
-        {this.renderJobsDetailsViews()}
+        <div className="jobs-cards-container">
+          {this.renderJobsDetailsViews()}
+        </div>
       </div>
     )
   }

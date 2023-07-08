@@ -41,8 +41,6 @@ class ProfileDetails extends Component {
 
     const fetchedProfileDetails = await response.json()
 
-    console.log(fetchedProfileDetails)
-
     if (response.ok === true) {
       const updatedProfileDetails = {
         name: fetchedProfileDetails.profile_details.name,

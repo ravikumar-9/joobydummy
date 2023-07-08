@@ -75,15 +75,17 @@ class Login extends Component {
               className="name-input"
               onChange={this.onChangeUserName}
               value={username}
+              id="name"
             />
-            <label htmlFor="name" className="label-name">
+            <label htmlFor="password" className="label-name">
               PASSWORD
             </label>
             <input
-              type="text"
+              type="password"
               className="name-input"
               onChange={this.onChangePassword}
               value={password}
+              id="password"
             />
             <button type="submit" className="login-button">
               Login
