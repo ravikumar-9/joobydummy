@@ -181,6 +181,10 @@ class JobsDetails extends Component {
     this.setState({employmentType: value}, this.getJobDetails())
   }
 
+  onChangeSalaryRanges = type => {
+    this.setState({minimumPackage: type}, this.getJobDetails())
+  }
+
   renderJobsDetailsViews = () => {
     const {jobsApiStatus} = this.state
     switch (jobsApiStatus) {
