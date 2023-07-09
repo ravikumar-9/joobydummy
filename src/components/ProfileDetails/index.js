@@ -60,9 +60,25 @@ class ProfileDetails extends Component {
     }
   }
 
+  reFetchProfileDetails = () => {
+    this.renderUserProfileDetails()
+  }
+
   renderLoaderView = () => (
     <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
+    </div>
+  )
+
+  renderProfileFailureView = () => (
+    <div className="profile-failure-container">
+      <button
+        type="button"
+        className="profile-retry-button"
+        onClick={this.reFetchProfileDetails()}
+      >
+        Retry
+      </button>
     </div>
   )
 

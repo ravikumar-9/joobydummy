@@ -37,9 +37,8 @@ class JobItemDetails extends Component {
   }
 
   getSpecificJobDetails = async () => {
-    const jwtToken = Cookies.get('jwt_token')
-
     this.setState({apiStatus: apiStatusConstants.inProgress})
+    const jwtToken = Cookies.get('jwt_token')
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -89,7 +88,7 @@ class JobItemDetails extends Component {
         specificJobList: updatedSpecificJobData,
         similarJobsDataList: updatedSimilarJobsData,
       })
-    } else {
+    } else if (specificJobResponse.status === 400) {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
@@ -220,11 +219,11 @@ class JobItemDetails extends Component {
       case apiStatusConstants.success:
         return this.renderSpecificSuccessView()
 
-      case apiStatusConstants.inProgress:
-        return this.renderLoadingView()
-
       case apiStatusConstants.failure:
         return this.renderJobsItemsFailureView()
+
+      case apiStatusConstants.inProgress:
+        return this.renderLoadingView()
 
       default:
         return null

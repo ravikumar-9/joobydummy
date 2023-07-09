@@ -27,3 +27,7 @@
   color: #000000;
   padding-left: 15px;
 }
+.profile-failure-container {
+  width: 90%;
+  background-color: white;
+}

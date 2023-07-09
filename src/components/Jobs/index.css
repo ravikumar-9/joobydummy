@@ -1,8 +1,3 @@
-.profile-container {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-}
 .jobs-main-container {
   background-color: #000000;
   height: max-content;
@@ -14,5 +9,4 @@
 .jobs-container {
   display: flex;
   flex-direction: column;
-  width: 60%;
 }
