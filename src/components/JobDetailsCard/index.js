@@ -10,7 +10,6 @@ import {BsFillBriefcaseFill} from 'react-icons/bs'
 
 const JobDetailsCard = props => {
   const {summary} = props
-  console.log(summary)
 
   const {
     id,

@@ -1,3 +1,132 @@
 .specific-job-bg-container {
   background-color: #000000;
 }
+.specific-job-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: max-content;
+}
+.visit-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  color: white;
+}
+
+.visit-icon {
+  margin-left: 4px;
+  margin-top: 10px;
+}
+.specific-job-summary-card {
+  height: max-content;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c364c;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  padding: 5px;
+}
+.company-link {
+  color: white;
+  text-decoration: none;
+}
+.skills-heading {
+  font-weight: bold;
+  font-size: 17px;
+  color: white;
+  padding-left: 24px;
+  padding-top: 13px;
+}
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 90%;
+}
+.skill-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  margin: 7px;
+}
+.skill-img {
+  height: 45px;
+  width: 45px;
+}
+.skill-name {
+  font-weight: bold;
+  font-size: 13px;
+  font-family: 'roboto';
+  color: #ffffff;
+  padding-left: 4px;
+}
+.life-at-company-heading {
+  font-weight: bold;
+  font-size: 23px;
+  font-family: 'roboto';
+  color: #ffffff;
+  padding-left: 24px;
+}
+@media screen and (min-width: 768px) {
+  .life-at-company-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 24px;
+  }
+  .life-at-company-description {
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'roboto';
+    color: #ffffff;
+    width: 70%;
+    padding: 4px;
+  }
+  .similar-jobs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .life-at-company-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 24px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+  }
+  .life-at-company-description {
+    font-weight: bold;
+    font-size: 10px;
+    font-family: 'roboto';
+    color: #ffffff;
+  }
+  .similar-jobs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+  }
+}
+.life-at-company-img {
+  height: 100%;
+  width: 29%;
+}
+.similar-jobs-heading {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'roboto';
+  color: #ffffff;
+  padding-left: 24px;
+}

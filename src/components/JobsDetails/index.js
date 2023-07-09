@@ -46,7 +46,6 @@ class JobsDetails extends Component {
     const response = await fetch(url, options)
 
     const fetchedJobDetails = await response.json()
-    console.log(fetchedJobDetails)
 
     if (response.ok === true) {
       const updatedJobsDetailsList = fetchedJobDetails.jobs.map(each => ({
