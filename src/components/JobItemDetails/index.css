@@ -118,6 +118,10 @@
     align-items: center;
     list-style-type: none;
   }
+  .skill-img {
+    height: 30px;
+    width: 34px;
+  }
 }
 .life-at-company-img {
   height: 100%;

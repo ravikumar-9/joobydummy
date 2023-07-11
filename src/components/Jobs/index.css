@@ -6,8 +6,18 @@
   display: flex;
   justify-content: space-between;
 }
-.jobs-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .jobs-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .jobs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
