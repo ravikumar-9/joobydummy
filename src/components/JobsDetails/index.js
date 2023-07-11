@@ -170,19 +170,17 @@ class JobsDetails extends Component {
     this.setState({searchInput: event.target.value})
   }
 
-  onEnterSearchInput = event => {
-    if (event.key === 'Enter') {
-      this.getJobDetails()
-    }
-    return null
+  onEnterSearchInput = () => {
+    this.getJobDetails()
   }
 
   onChangeEmploymentType = value => {
-    this.setState({employmentType: value}, this.getJobDetails())
+    this.setState({employmentType: value}, this.getJobDetails)
   }
 
   onChangeSalaryRanges = type => {
-    this.setState({minimumPackage: type}, this.getJobDetails())
+    console.log(type)
+    this.setState({minimumPackage: type}, this.getJobDetails)
   }
 
   renderJobsDetailsViews = () => {

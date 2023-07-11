@@ -4,7 +4,7 @@
   color: white;
 }
 .filters-container {
-  width: 70%;
+  width: 90%;
   margin-left: 12px;
 }
 .options-container {
@@ -12,6 +12,7 @@
   flex-direction: row;
   align-items: center;
   margin: 4px;
+  width: 90%;
 }
 .radio-button {
   height: 14px;
@@ -25,4 +26,5 @@
 }
 .type-of-options-container {
   list-style-type: none;
+  width: 90%;
 }

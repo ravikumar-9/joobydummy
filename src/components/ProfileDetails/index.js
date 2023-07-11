@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner'
 
 import './index.css'
 
-const apiStatusConstants = {
+const profileApiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
   failure: 'FAILURE',
@@ -16,7 +16,7 @@ const apiStatusConstants = {
 class ProfileDetails extends Component {
   state = {
     userProfileList: '',
-    profileApiStatus: apiStatusConstants.initial,
+    profileApiStatus: profileApiStatusConstants.initial,
   }
 
   componentDidMount() {
@@ -26,7 +26,7 @@ class ProfileDetails extends Component {
   /* rendering userProfile Details when the jobs route is opened */
 
   renderUserProfileDetails = async () => {
-    this.setState({profileApiStatus: apiStatusConstants.inProgress})
+    this.setState({profileApiStatus: profileApiStatusConstants.inProgress})
 
     const url = 'https://apis.ccbp.in/profile'
 
@@ -51,12 +51,12 @@ class ProfileDetails extends Component {
 
       this.setState({
         userProfileList: updatedProfileDetails,
-        profileApiStatus: apiStatusConstants.success,
+        profileApiStatus: profileApiStatusConstants.success,
       })
 
       console.log(updatedProfileDetails)
     } else {
-      this.setState({profileApiStatus: apiStatusConstants.failure})
+      this.setState({profileApiStatus: profileApiStatusConstants.failure})
     }
   }
 
@@ -86,11 +86,11 @@ class ProfileDetails extends Component {
     const profileApiStatus = this.status
 
     switch (profileApiStatus) {
-      case apiStatusConstants.success:
+      case profileApiStatusConstants.success:
         return this.renderProfileSuccessView()
-      case apiStatusConstants.failure:
+      case profileApiStatusConstants.failure:
         return this.renderProfileFailureView()
-      case apiStatusConstants.inProgress:
+      case profileApiStatusConstants.inProgress:
         return this.renderLoaderView()
 
       default:
